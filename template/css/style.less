@@ -1,0 +1,95 @@
+
+//variables
+@fontcolor: #ffffff;
+@backgroundcolor: #000;
+@accsentcolor:  #FF0000;
+@responsivewidth: 100%;
+@overallmargin: 2px;
+@lineheight: 1.5em;
+@bordercolor: #ffffff;
+
+
+
+//mixins	
+.well {
+		border-style: solid;
+		border-width: 2px;
+		border-color: @bordercolor;
+		border-radius: 4px;
+		background-color: @backgroundcolor;
+		padding: 15px;
+        margin-right: auto;
+        margin-left: auto;
+}
+
+.form  {
+  width: @responsivewidth;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.container {
+    max-width: 800px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.button{
+	display: inline-block;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+	background-color: @backgroundcolor;
+    border: 3px solid @fontcolor;
+    border-radius: 4px;
+    padding: 10px 20px;
+    color: @fontcolor;
+	cursor: pointer;
+}
+.center {
+  margin: auto;
+  width: 60%;
+  padding: 10px;
+  text-align: center;
+}
+
+//selectors
+
+body{
+	background-color: @backgroundcolor;
+	color:@fontcolor;
+	margin: @overallmargin;
+	line-height: @lineheight;
+	  .container{
+		.container();
+
+	   .well{
+		 .well();
+		   input[type=text], input[type=email], textarea{ 
+			   .form();
+		  button{
+			.button();
+		 }
+		}
+	}
+		  
+		  footer{
+			    i{
+			  .center();
+				  }
+		  }  
+	}
+	
+
+}
+
