@@ -1,10 +1,10 @@
 <header>
-		<span>Author : <a href="" target="_blank">Ace in the Hole</a>
+		<span><a href="" target="_blank">Ace in the Hole</a>
 			<ul class="desktop_menu">
-				<li><a href="#menu" target="_self">Menu</a></li>
-				<li><a href="#contact" target="_self">Contact</a></li>
-				<li><a href="#bio" target="_self">About</a></li>
-				<li><a href="#map" target="_self"> Find us</a></li>
+				<li><a href="#menu" target="_self">LINK FOUR</a></li>
+				<li><a href="#contact" target="_self">LINK THREE</a></li>
+				<li><a href="#bio" target="_self">LINK TWO</a></li>
+				<li><a href="#map" target="_self"> LINK ONE</a></li>
 			</ul>
 		</span>
 
@@ -25,9 +25,7 @@
 				<a href="#">
 					<li>LINK FOUR</li>
 				</a>
-				<a href="#">
-					<li>LINK FIVE</li>
-				</a>
+			
 			</ul>
 		</div>
 

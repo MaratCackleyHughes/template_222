@@ -81,9 +81,7 @@ body .container .well textarea {
   border-radius: 4px;
   box-sizing: border-box;
 }
-body .container .well input[type=text] button,
-body .container .well input[type=email] button,
-body .container .well textarea button {
+body .container .well button {
   display: inline-block;
   margin-bottom: 0;
   font-size: 14px;
