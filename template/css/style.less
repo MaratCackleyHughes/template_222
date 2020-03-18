@@ -1,18 +1,32 @@
 //variables
 @fontcolor: #ffffff;
+@font_main: 'Libre Baskerville', serif;
 @backgroundcolor: #000;
 @accsentcolor: #FF0000;
+@thirdcolor: #686868;
 @responsivewidth: 100%;
-@overallmargin: 2px;
+@overallmargin: 3px;
 @lineheight: 1.5em;
 @bordercolor: #ffffff;
-
+@h1: 1.60em;
+@h2: 1.45em;
+@h3: 1.25em;
 
 
 //mixins	
+
+.container {
+	max-width: 800px;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: @backgroundcolor;
+}
+
 .well {
 	border-style: solid;
-	border-width: 2px;
+	border-width: 1px;
 	border-color: @bordercolor;
 	border-radius: 4px;
 	background-color: @backgroundcolor;
@@ -20,8 +34,14 @@
 	margin-right: auto;
 	margin-left: auto;
 }
+.select_menu{
+	width: 70px;
+	color:@thirdcolor;
+	
+}
 
 .form {
+		color:@thirdcolor;
 	width: @responsivewidth;
 	padding: 12px 20px;
 	margin: 8px 0;
@@ -31,13 +51,6 @@
 	box-sizing: border-box;
 }
 
-.container {
-	max-width: 800px;
-	padding-right: 15px;
-	padding-left: 15px;
-	margin-right: auto;
-	margin-left: auto;
-}
 
 .button {
 	display: inline-block;
@@ -49,50 +62,177 @@
 	white-space: nowrap;
 	vertical-align: middle;
 	background-color: @backgroundcolor;
-	border: 3px solid @fontcolor;
+	border: 1px solid @fontcolor;
 	border-radius: 4px;
 	padding: 10px 20px;
 	color: @fontcolor;
 	cursor: pointer;
 }
 
+.my-hover-mixin() {
+
+	&:link {
+		color: @accsentcolor;
+	}
+
+	&:visited {
+		border: 1px solid @accsentcolor;
+	}
+
+	&:hover {
+		background-color: @thirdcolor;
+		
+	}
+
+	cursor: pointer;
+	transition-duration: 0.5s;
+
+}
+
 .center {
 	margin: auto;
-	width: 60%;
 	padding: 10px;
 	text-align: center;
 }
 
+.seperate_elements {
+	border-bottom-color: @accsentcolor;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+}
+
+.heading_styles {
+	font-family: 'IBM Plex Sans', sans-serif;
+	text-decoration: underline;
+	text-underline-position: under;
+	text-decoration-color: @accsentcolor;
+	padding-bottom: 10px;
+
+}
+.two_colums{
+	display: grid;
+	grid-template-columns: auto auto;
+}
+
+.footer_border{
+            border-top: solid;
+			border-top-color:  @accsentcolor;
+			border-top-width: 1px;
+}
 //selectors
 
+
 body {
-	background-color: @backgroundcolor;
+ 	font-family: @font_main;
+	background-color: @thirdcolor;
 	color: @fontcolor;
 	margin: @overallmargin;
 	line-height: @lineheight;
+	
+	h1{
+		font-size: @h1;
+	}
+	h2{
+		font-size: @h2;
+	}
+		h3{
+		font-size: @h3;
+	}
 
+	h1,
+	h2,
+	h3,
+		{
+		.heading_styles();
+	}
+
+ a {
+		.my-hover-mixin();
+	}
+	
 	.container {
 		.container();
 
+
 		.well {
 			.well();
+			
+			select{
+				.select_menu();
+			}
 
+			select,
 			input[type=text],
 			input[type=email],
+			input[type=number],
+			input[type=tel],
 			textarea {
 				.form();
+				font-family: inherit;
+				font-size: inherit;
 			}
-				button {
-					.button();
-				}
+
+			input[type=submit] {
+				.button();
+				.my-hover-mixin();
+				font-family: inherit;
+			}
+		}
+		
+			#openweathermap-widget-14{
+		margin: auto;
+		text-decoration: none;
+	    font-family: "Roboto";
+		
+	}
+	
+.widget-left-menu__footer {
+		display: none;
+	}
+	
+	#container-openweathermap-widget-14 > div > div.widget-left-menu.widget-left-menu--small.widget-left-menu--brown > p.weather-left-card__number.weather-left-card__number--small > span{ padding-left: 0;}
+	
+	#container-openweathermap-widget-14 > div > div.widget-left-menu.widget-left-menu--small.widget-left-menu--brown > div > h2{
+		text-decoration: none;
+		padding-top: 20px;
+	}
+		.two_colums{
+			.two_colums();
+		}
+		
+	}
+	
+	footer {
+		 .footer_border();
+		 .center();
+		  background-color: black;
+		
+		a:link{
+			text-decoration: none;
+		}
+		a:hover{
+			background-color: black;
 		}
 
-		footer {
-			i {
-				.center();
-			}
-		}
+        }
+		
 	}
 
 
+@media only screen and (min-width: 600px) {
+	body {
+		font-size: 1.55vw;
+		
+	}
+}
+
+@media screen and (max-width: 1162px) and (min-width: 600px) {
+	body {
+		font-size: 2.85vw;
+	
+	}
+}
+.space_out_heading{
+	line-height: 1.6em;
+	margin-top: 0;
 }

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Registration Form </title>
+</head>
+
+<body>
+	<form action="sample_contact_form.php" method="post">
+		<label for="fname"> First Name:</label><br>
+		<input type="text" id="fname" name="fname" placeholder="Your first name..">
+		<br><br>
+		<label for="lname"> Last Name:</label><br>
+		<input type="text" id="lname" name="lname" placeholder="Your last name..">
+		<br><br>
+		<label for="age">Age:</label><br>
+		<input type="number" id="age" name="age">
+		<br><br>
+		<label for="ce-mail">E-mail:</label><br>
+		<input type="text" id="email" name="email" placeholder="Your e-mail..">
+		<br> <br>
+		<label for="ename"> Emergency Contact:</label><br>
+		<input type="text" id="ename" name="ename" placeholder="Emergency name..">
+		<br><br>
+		<form>
+			<label for="phone">Emergency phone number:</label><br>
+			<input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+		</form>
+		<br>
+		<label for="events">Choose your event:</label><br>
+		<select id="events">
+			<option value="try-a-tri">Try-a-Tri</option>
+			<option value="sprint">Sprint</option>
+			<option value="halfmarathon">Half Marathon</option>
+			<option value="10k">10K</option>
+			<option value="olympic">Olympic</option>
+			<option value="longcourse">Long Course</option>
+			<option value="splashndash">Splash n Dash</option>
+		</select>
+		<br> <br>
+
+		<label for="gender">Gender:</label><br>
+		<select id="gender">
+			<option value="Male">Male</option>
+			<option value="Female">Female</option>
+			<option value="Non-binary">Non-binary</option>
+		</select>
+		<br> <br>
+
+		<label for="comment">Comment:</label><br>
+		<textarea id="comment" name="comment">Put your comment here.</textarea>
+		<br> <br>
+
+		<input type="submit" value="Submit">
+	</form>
+</body>
+
+</html>
