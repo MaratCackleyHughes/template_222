@@ -1,0 +1,41 @@
+.widget-left-menu__footer {
+		display: none;
+	}
+
+	#openweathermap-widget-14 {
+		display: inline;
+		position: absolute;
+		margin-left: 5px;
+
+	}
+
+	.widget-left-menu__header-container {
+		background-color: black;
+	}
+
+	#container-openweathermap-widget-14 > div > div.widget-left-menu.widget-left-menu--small.widget-left-menu--brown > div > h2 {
+		color: white;
+		font-family: 'Libre Baskerville', serif;
+	}
+
+	#container-openweathermap-widget-14 > div > div.widget-left-menu.widget-left-menu--small.widget-left-menu--brown > p.calendar.calendar--small2.calendar--brown {
+		background-color: black;
+	}
+
+	.widget-left-menu--brown {
+		background-color: black;
+	}
+
+	.widget-left-menu__header {
+		color: white;
+		text-decoration: none;
+	}
+
+	.weather-left-card__number--small {
+		color: white;
+		background-color: black;
+	}
+
+	#container-openweathermap-widget-14 > div > div.widget-left-menu.widget-left-menu--small.widget-left-menu--brown > p.weather-left-card__number.weather-left-card__number--small {
+		color: white;
+	}
